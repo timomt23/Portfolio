@@ -400,6 +400,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #17
 .legal-body p{margin:0 0 10px;color:#393a4e;font-size:16.5px;line-height:1.65}
 .footer-legal{display:inline-block;margin-top:8px;color:#393a4e;text-decoration:underline;text-underline-offset:3px}
 .footer-legal:hover{color:#17266c}
+
+/* Quatre cartes LJ : grille 2 x 2 */
+.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:800px){.why-grid{grid-template-columns:1fr}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -419,8 +423,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #17
     <div class="landing-inner">
       <h1 data-i18n-html="landing_title">Bonjour LJ <b class="nw">Hôtels &amp; Co.</b><span>Ravi de vous retrouver.</span></h1>
       <div class="landing-bottom">
-        <p class="landing-intro" data-i18n="landing_restau">J’ai toujours aimé le monde de la restauration. Au fil de mes expériences à Béziers, au comptoir, en salle et aux côtés de traiteurs, j’ai appris à connaître l’offre de la ville, ses établissements et ses prestataires, mais aussi sa clientèle : habitués, familles, entreprises et visiteurs de passage.</p>
-        <p class="landing-pitch" data-i18n="landing_pitch">Étudiant en Master Programme Grande École à Montpellier Business School, je recherche une alternance de deux ans et serais heureux d’apprendre au sein du groupe, dans des fonctions de contrôle de gestion et de finance, dans un objectif de développement commercial.</p>
+        <p class="landing-intro" data-i18n-html="landing_restau">Toujours attiré par le monde de la restauration, j’ai occupé des postes variés : service, bar, caisse, approvisionnements, chef de rang et maître d’hôtel.<br><br>Ces expériences m’ont permis de développer des compétences : un excellent relationnel ainsi que des qualités commerciales et analytiques. Leur diversité m’a également permis d’acquérir une bonne connaissance du secteur, de Paris à Béziers.</p>
+        <p class="landing-pitch" data-i18n-html="landing_pitch">Étudiant en Master Programme Grande École à Montpellier Business School, je recherche une alternance avec une disponibilité immédiate, au rythme de trois semaines en entreprise et une semaine à l’école.<br><br>Je souhaite évoluer dans des fonctions transversales, au contact des directions des différents établissements. L’objectif serait de contribuer à l’analyse financière et stratégique, au suivi de la performance, à la coordination de projets et à la synthèse d’informations utiles à la prise de décision.<br><br>Je souhaite également pouvoir accompagner les directions sur des sujets de développement, d’organisation et de pilotage.</p>
         <div class="landing-meta">
           <a class="enter-link" href="#/parcours" data-i18n="landing_enter">Découvrir mon parcours</a>
           <span data-i18n="landing_meta">Timo · Master Programme Grande École · MBS</span>
@@ -432,16 +436,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #17
     <div class="page-inner">
       <div class="page-head">
         <div>
-          <h1 data-i18n-html="about_title">Un parcours qui s’est construit <em>sur le terrain.</em></h1>
+          <h1 data-i18n-html="about_title">Grandi à l’international, <em>curieux de tout.</em></h1>
         </div>
-        <p class="page-lead" data-i18n="about_lead">Mon parcours s’est construit au fil d’expériences variées. Chaque nouveau contexte, métier et rencontre a enrichi ma façon de travailler.</p>
+        <p class="page-lead" data-i18n="about_lead">Quelques lignes pour me découvrir un peu au-delà de mon parcours.</p>
       </div>
 
       <div class="about-grid">
         <div>
-          <h2 data-i18n="about_heading">Ce qui relie toutes mes expériences.</h2>
-          <p data-i18n="about_p1">Dans des métiers et des cultures différents, j’ai retrouvé le même intérêt : comprendre les besoins, créer une relation de confiance et faire avancer les choses. Que ce soit dans la relation client, la communication ou l’organisation quotidienne, j’aime faire le lien entre les personnes et passer des idées à leur réalisation.</p>
-          <p data-i18n="about_p2">Aujourd’hui en Master Programme Grande École à Montpellier Business School, j’aimerais poursuivre dans le secteur de l’hôtellerie-restauration, en découvrant cette fois l’envers du décor : la gestion, les chiffres et ce qui fait qu’un établissement se développe.</p>
+          <p data-i18n="about_p1">J’ai grandi entre plusieurs pays, la Suisse, l’Afrique du Sud et le Japon. Changer régulièrement d’école, de langue et de repères m’a appris à m’adapter vite, à être polyvalent et à aller vers les autres. Ce sont des qualités que je retrouve dans les métiers de la finance, où l’on travaille avec des interlocuteurs très différents, du terrain à la direction.</p>
+          <p data-i18n="about_p2">Depuis mes 17 ans, j’ai toujours travaillé en parallèle de mes études, d’abord avec des petits boulots, puis en alternance. Cette organisation m’a donné le sens des responsabilités et l’habitude de mener plusieurs choses de front. J’y ai aussi appris que la théorie prend tout son sens quand on la met en pratique.</p>
           <details class="more">
             <summary data-i18n="more_sum">Au-delà du CV</summary>
             <ul>
@@ -539,7 +542,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #17
             <span class="experience-plus" aria-hidden="true">+</span>
           </button>
           <div class="experience-details">
-            <div><span class="small-label" data-i18n="exp5_label">Ce que j’y ai fait</span><p data-i18n="exp5_desc">Une première expérience très concrète au contact du public, entre service, vente et gestion du quotidien. J’y ai appris à accueillir avec attention, à conseiller rapidement et à garder le sens du détail, même quand le rythme s’accélère.</p></div>
+            <div><span class="small-label" data-i18n="exp5_label">Ce que j’y ai fait</span><p data-i18n="exp5_desc">Un job étudiant, tous les dimanches : une première expérience très concrète au contact du public, entre service, vente et gestion du quotidien. J’y ai appris à accueillir avec attention, à conseiller rapidement et à garder le sens du détail, même quand le rythme s’accélère.</p></div>
             <ul><li data-i18n="exp5_li1">Accueil et conseil de la clientèle</li><li data-i18n="exp5_li2">Vente et mise en valeur des produits</li><li data-i18n="exp5_li3">Gestion de la caisse et de l’espace de vente</li></ul>
           </div>
         </article>
@@ -582,21 +585,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #17
         <div>
           <h1 data-i18n-html="loop_title">Ce qui m’attire chez <em>LJ <b class="nw">Hôtels &amp; Co.</b></em></h1>
         </div>
-        <p class="page-lead" data-i18n="loop_lead">Un groupe qui contribue à l’attractivité de Béziers, une clientèle que j’ai appris à connaître, et beaucoup à apprendre à vos côtés.</p>
       </div>
 
       <div class="why-grid">
-        <article class="why-card"><h2 data-i18n="loop_card1_title">Un groupe ancré à Béziers.</h2><p data-i18n="loop_card1_p">Quatre hôtels, une table étoilée, un Bib Gourmand, des terrasses place Jean-Jaurès : le groupe participe à l’attractivité de la ville. Ce serait une chance d’y contribuer, même modestement.</p></article>
-        <article class="why-card"><h2 data-i18n="loop_card2_title">Une clientèle que je connais.</h2><p data-i18n="loop_card2_p">Au comptoir chez Arlett, en salle avec Les Savouries, à la buvette pendant la Féria : j’ai appris à connaître la clientèle biterroise, ses habitudes, ses attentes et ses grandes affluences.</p></article>
-        <article class="why-card"><h2 data-i18n="loop_card3_title">L’envers du décor.</h2><p data-i18n="loop_card3_p">Mes premières expériences en gestion m’ont donné quelques bases. J’aimerais les approfondir à vos côtés, en comprenant comment le groupe pilote ses établissements et accompagne ses équipes, en cohérence avec sa vision d’ensemble.</p></article>
+        <article class="why-card"><h2 data-i18n="loop_card1_title">Une identité forte à Béziers.</h2><p data-i18n="loop_card1_p">Quatre hôtels, des tables aux styles variés, des terrasses place Jean-Jaurès. Chaque adresse a son caractère, et l’ensemble donne au groupe une vraie place dans la vie de la ville.</p></article>
+        <article class="why-card"><h2 data-i18n="loop_card2_title">Le goût des choses bien faites.</h2><p data-i18n="loop_card2_p">De l’étoile Michelin au Bib Gourmand, en passant par la place donnée à l’art, le groupe allie diversité et exigence. C’est cette recherche de qualité qui me donne envie de le rejoindre.</p></article>
+        <article class="why-card"><h2 data-i18n="loop_card4_title">Du terrain à la stratégie.</h2><p data-i18n="loop_card4_p">Le service, la caisse, les approvisionnements, le rythme d’un soir de forte affluence : ce quotidien, je le connais. Ce qui m’attire aujourd’hui, c’est l’étape suivante : comprendre comment un groupe qui crée et reprend des établissements analyse et pilote ses projets.</p></article>
+        <article class="why-card"><h2 data-i18n="loop_card3_title">Piloter la diversité.</h2><p data-i18n="loop_card3_p">Des établissements très différents et des projets de croissance : c’est ce qui m’attire côté finance. J’y apporterais ma connaissance du terrain et ma rigueur, et j’y apprendrais à analyser la performance pour accompagner les directions dans leurs choix stratégiques.</p></article>
       </div>
 
       <div class="letter">
         <div>
           <h2 data-i18n-html="loop_letter_title">Je serais ravi <em>d’échanger avec vous.</em></h2>
-          <p data-i18n="loop_letter_p">Merci d’avoir pris le temps de découvrir mon parcours. Je reste disponible pour un échange, à votre convenance.</p>
           <p class="cta-row"><a class="cta cta--fill" href="CV-Timo-Marguerat-Trichard.pdf" data-cv target="_blank" rel="noopener" data-i18n="cta_cv">Télécharger mon CV</a><a class="cta" data-mail href="mailto:timomt.pro@gmail.com?subject=Candidature%20alternance%20%E2%80%94%20Timo%20Marguerat-Trichard" data-i18n="cta_mail">M’écrire</a></p>
-          <p class="mail-line">timomt.pro@gmail.com · 07 86 78 23 23</p>
         </div>
       </div>
     </div>
@@ -662,11 +663,12 @@ aria_top: 'Retour en haut', aria_nav_main: 'Navigation principale', aria_nav_sec
       access_error: 'Le code ne correspond pas. Essayez encore.',
       access_note: 'Indice : ce qui survole vos sites, en un mot.', access_footer: '01 / 05 · Accès privé',
       about_kicker: '02 / 05 · À propos',
-      about_title: 'Un parcours qui s’est construit <em>sur le terrain.</em>',
-      about_lead: 'Mon parcours s’est construit au fil d’expériences variées. Chaque nouveau contexte, métier et rencontre a enrichi ma façon de travailler.',
-      about_heading: 'Ce qui relie toutes mes expériences.',
-      about_p1: 'Dans des métiers et des cultures différents, j’ai retrouvé le même intérêt : comprendre les besoins, créer une relation de confiance et faire avancer les choses. Que ce soit dans la relation client, la communication ou l’organisation quotidienne, j’aime faire le lien entre les personnes et passer des idées à leur réalisation.',
-      about_p2: 'Aujourd’hui en Master Programme Grande École à Montpellier Business School, j’aimerais poursuivre dans le secteur de l’hôtellerie-restauration, en découvrant cette fois l’envers du décor : la gestion, les chiffres et ce qui fait qu’un établissement se développe.',
+      about_title: 'Grandi à l’international, <em>curieux de tout.</em>',
+      about_lead: 'Quelques lignes pour me découvrir un peu au-delà de mon parcours.',
+      about_heading: 'Qui je suis.',
+      about_p1: 'J’ai grandi entre plusieurs pays, la Suisse, l’Afrique du Sud et le Japon. Changer régulièrement d’école, de langue et de repères m’a appris à m’adapter vite, à être polyvalent et à aller vers les autres. Ce sont des qualités que je retrouve dans les métiers de la finance, où l’on travaille avec des interlocuteurs très différents, du terrain à la direction.',
+      about_p3: 'Au quotidien, j’aime le contact, le travail en équipe et les journées qui ne se ressemblent pas. Le sport tient aussi une grande place dans ma vie : il m’apprend la régularité et l’envie de progresser.',
+      about_p2: 'Depuis mes 17 ans, j’ai toujours travaillé en parallèle de mes études, d’abord avec des petits boulots, puis en alternance. Cette organisation m’a donné le sens des responsabilités et l’habitude de mener plusieurs choses de front. J’y ai aussi appris que la théorie prend tout son sens quand on la met en pratique.',
       about_quote: 'Je n’ai pas un parcours tout tracé. J’ai un parcours qui m’a appris à m’adapter.',
       about_fact1: 'années dans des environnements professionnels très différents.',
       about_fact2: 'ans à l’étranger, entre la Suisse, l’Afrique du Sud et le Japon.',
@@ -692,12 +694,12 @@ aria_top: 'Retour en haut', aria_nav_main: 'Navigation principale', aria_nav_sec
       exp4b_role: 'Alternance · Chargé de communication', exp4b_date: 'Octobre 2022 – Août 2023', exp4b_desc: 'Création de supports commerciaux, animation des réseaux sociaux et participation à l’organisation d’événements. En parallèle, la réparation de matériel de kitesurf a renforcé ma connaissance des produits et des attentes de nos clients, me permettant de gagner en autonomie dans les missions commerciales.',
       exp4b_li1: 'Supports commerciaux', exp4b_li2: 'Animation des réseaux sociaux', exp4b_li3: 'Organisation d’événements',
 exp5_title: 'Garçon de café · Chez Bruno', exp5_role: 'Accueil · conseil · vente · caisse', exp5_date: 'Septembre 2019 – Avril 2022', exp5_label: 'Ce que j’y ai fait',
-      exp5_desc: 'Une première expérience très concrète au contact du public, entre service, vente et gestion du quotidien. J’y ai appris à accueillir avec attention, à conseiller rapidement et à garder le sens du détail, même quand le rythme s’accélère.',
+      exp5_desc: 'Un job étudiant, tous les dimanches : une première expérience très concrète au contact du public, entre service, vente et gestion du quotidien. J’y ai appris à accueillir avec attention, à conseiller rapidement et à garder le sens du détail, même quand le rythme s’accélère.',
       exp5_li1: 'Accueil et conseil de la clientèle', exp5_li2: 'Vente et mise en valeur des produits', exp5_li3: 'Gestion de la caisse et de l’espace de vente',
       tech_title: 'Compétences & appétences', tech_date1: 'Gestion', tech_title1: 'Suivi et analyse', tech_desc1: 'Reporting et tableaux de suivi sous Excel, suivi budgétaire, rapprochements fournisseurs, contrôle de caisse, analyse de la rentabilité des devis.', tech_date2: 'Depuis 2022', tech_title2: 'ChatGPT Pro', tech_desc2: 'Usage quotidien de l’IA générative pour apprendre, produire et gagner du temps.', tech_date3: 'Outils', tech_title3: 'Au quotidien', tech_desc3: 'Excel, Pack Office, Google Workspace, logiciels de caisse et de facturation (Square, SumUp, Zervant), WordPress, Canva.', tech_date5: 'Relationnel', tech_title5: 'Accueil, conseil, échange', tech_desc5: 'Plusieurs années au contact des clients, en salle comme en vente. 1ʳᵉ place au concours d’éloquence IDRAC Montpellier 2025.', tech_date4: 'Appétences', tech_title4: 'Ce qui me motive', tech_desc4: 'L’hôtellerie-restauration, la vie économique locale, la presse économique, et l’envie de comprendre ce qui fait qu’une activité fonctionne.',
       nav_finance: 'Ce que j’ai appris', meta_title_finance: 'Ce que j’ai appris — Timo × LJ Hôtels & Co',
-      landing_restau: 'J’ai toujours aimé le monde de la restauration. Au fil de mes expériences à Béziers, au comptoir, en salle et aux côtés de traiteurs, j’ai appris à connaître l’offre de la ville, ses établissements et ses prestataires, mais aussi sa clientèle : habitués, familles, entreprises et visiteurs de passage.',
-      landing_pitch: 'Étudiant en Master Programme Grande École à Montpellier Business School, je recherche une alternance de deux ans et serais heureux d’apprendre au sein du groupe, dans des fonctions de contrôle de gestion et de finance, dans un objectif de développement commercial.',
+      landing_restau: 'Toujours attiré par le monde de la restauration, j’ai occupé des postes variés : service, bar, caisse, approvisionnements, chef de rang et maître d’hôtel.<br><br>Ces expériences m’ont permis de développer des compétences : un excellent relationnel ainsi que des qualités commerciales et analytiques. Leur diversité m’a également permis d’acquérir une bonne connaissance du secteur, de Paris à Béziers.',
+      landing_pitch: 'Étudiant en Master Programme Grande École à Montpellier Business School, je recherche une alternance avec une disponibilité immédiate, au rythme de trois semaines en entreprise et une semaine à l’école.<br><br>Je souhaite évoluer dans des fonctions transversales, au contact des directions des différents établissements. L’objectif serait de contribuer à l’analyse financière et stratégique, au suivi de la performance, à la coordination de projets et à la synthèse d’informations utiles à la prise de décision.<br><br>Je souhaite également pouvoir accompagner les directions sur des sujets de développement, d’organisation et de pilotage.',
       fin_kicker: '05 / 06 · Ce que j’ai appris', fin_title: 'Ce que Béziers <em>m’a appris.</em>', fin_lead: 'Arlett, Les Savouries, la Féria : ces expériences m’ont permis de mieux connaître la clientèle biterroise et le quotidien d’un établissement. Voici ce que j’en retiens.',
       fin_c1_label: '01 / Le comptoir', fin_c1_title: 'Un an chez Arlett', fin_c1_p: 'Vous connaissez déjà Arlett. Y participer dès le lancement m’a beaucoup appris : la caisse, les fournisseurs, les habitudes des clients du matin et les heures plus calmes. J’y ai découvert ce qui compte pour qu’un client ait envie de revenir.',
       fin_c2_label: '02 / Les événements', fin_c2_title: 'En salle avec Les Savouries', fin_c2_p: 'Pour un traiteur biterrois, sur des événements à forte affluence. J’y ai découvert les attentes de la clientèle locale lors d’une réception, et l’importance de la coordination entre cuisine et salle.',
@@ -723,14 +725,15 @@ exp5_title: 'Garçon de café · Chez Bruno', exp5_role: 'Accueil · conseil · 
       loop_kicker: '05 / 05 · Pourquoi LJ Hôtels & Co',
       loop_title: 'Ce qui m’attire chez <em>LJ <b class="nw">Hôtels &amp; Co.</b></em>',
       loop_lead: 'Un groupe qui contribue à l’attractivité de Béziers, une clientèle que j’ai appris à connaître, et beaucoup à apprendre à vos côtés.',
-      loop_card1_title: 'Un groupe ancré à Béziers.',
-      loop_card1_p: 'Quatre hôtels, une table étoilée, un Bib Gourmand, des terrasses place Jean-Jaurès : le groupe participe à l’attractivité de la ville. Ce serait une chance d’y contribuer, même modestement.',
-      loop_card2_title: 'Une clientèle que je connais.',
-      loop_card2_p: 'Au comptoir chez Arlett, en salle avec Les Savouries, à la buvette pendant la Féria : j’ai appris à connaître la clientèle biterroise, ses habitudes, ses attentes et ses grandes affluences.',
-      loop_card3_title: 'L’envers du décor.',
-      loop_card3_p: 'Mes premières expériences en gestion m’ont donné quelques bases. J’aimerais les approfondir à vos côtés, en comprenant comment le groupe pilote ses établissements et accompagne ses équipes, en cohérence avec sa vision d’ensemble.',
+      loop_card1_title: 'Une identité forte à Béziers.',
+      loop_card1_p: 'Quatre hôtels, des tables aux styles variés, des terrasses place Jean-Jaurès. Chaque adresse a son caractère, et l’ensemble donne au groupe une vraie place dans la vie de la ville.',
+      loop_card2_title: 'Le goût des choses bien faites.',
+      loop_card2_p: 'De l’étoile Michelin au Bib Gourmand, en passant par la place donnée à l’art, le groupe allie diversité et exigence. C’est cette recherche de qualité qui me donne envie de le rejoindre.',
+      loop_card4_title: 'Du terrain à la stratégie.', loop_card4_p: 'Le service, la caisse, les approvisionnements, le rythme d’un soir de forte affluence : ce quotidien, je le connais. Ce qui m’attire aujourd’hui, c’est l’étape suivante : comprendre comment un groupe qui crée et reprend des établissements analyse et pilote ses projets.',
+      loop_card3_title: 'Piloter la diversité.',
+      loop_card3_p: 'Des établissements très différents et des projets de croissance : c’est ce qui m’attire côté finance. J’y apporterais ma connaissance du terrain et ma rigueur, et j’y apprendrais à analyser la performance pour accompagner les directions dans leurs choix stratégiques.',
       loop_letter_title: 'Je serais ravi <em>d’échanger avec vous.</em>',
-      loop_letter_p: 'Merci d’avoir pris le temps de découvrir mon parcours. Je reste disponible pour un échange, à votre convenance.',
+      loop_letter_p: 'Merci d’avoir pris le temps de découvrir mon parcours. Je reste disponible à votre convenance.',
       nav_cv: 'CV ↓',
       more_sum: 'Au-delà du CV', more_1: 'Première place au concours d’éloquence IDRAC Montpellier 2025', more_2: 'Sport : cross-training, natation, course à pied, randonnée', more_3: 'Lecture de biographies, presse internationale et économique',
       cta_cv: 'Télécharger mon CV', cta_mail: 'M’écrire',
@@ -759,11 +762,12 @@ aria_top: 'Back to top', aria_nav_main: 'Main navigation', aria_nav_secondary: '
       access_error: 'That code does not match. Try again.',
       access_note: 'Hint: what flies over your sites, in one word (in French).', access_footer: '01 / 05 · Private access',
       about_kicker: '02 / 05 · About me',
-      about_title: 'A background shaped <em>by real experience.</em>',
-      about_lead: 'My path has been shaped by very different experiences. Each new setting, job and encounter has added to the way I work.',
-      about_heading: 'What ties these experiences together.',
-      about_p1: 'Across different jobs and cultures, I kept finding the same interest: understanding needs, building trust and getting things done. Whether in client relations, communications or day-to-day operations, I like connecting people and turning ideas into results.',
-      about_p2: 'Now in a Master in Management at Montpellier Business School, I would like to continue in hospitality, this time discovering what goes on behind the scenes: management, the numbers and what makes a venue grow.',
+      about_title: 'Raised abroad, <em>curious about everything.</em>',
+      about_lead: 'A few lines to get to know me a little beyond my background.',
+      about_heading: 'Who I am.',
+      about_p1: 'I grew up across several countries: Switzerland, South Africa and Japan. Regularly changing schools, languages and points of reference taught me to adapt quickly, to be versatile and to reach out to people. These are qualities I find again in finance roles, where you work with very different people, from the floor to senior management.',
+      about_p3: 'Day to day, I enjoy people, teamwork and days that are never the same. Sport also plays a big part in my life: it teaches me consistency and the drive to improve.',
+      about_p2: 'Since I was 17, I have always worked alongside my studies, first in small jobs, then in work-study roles. This gave me a sense of responsibility and the habit of handling several things at once. It also taught me that theory makes full sense once you put it into practice.',
       about_quote: 'I may not have followed a straight path — but every step taught me how to adapt.',
       about_fact1: 'years spent working in very different environments.',
       about_fact2: 'years abroad, between Switzerland, South Africa and Japan.',
@@ -786,12 +790,12 @@ aria_top: 'Back to top', aria_nav_main: 'Main navigation', aria_nav_secondary: '
       exp4b_role: 'Work-study · Communications Officer', exp4b_date: 'October 2022 – August 2023', exp4b_desc: 'Creating sales materials, running social media and helping organise events. Alongside, repairing kitesurf gear strengthened my knowledge of the products and of what our customers expect.',
       exp4b_li1: 'Sales materials', exp4b_li2: 'Social media', exp4b_li3: 'Event organisation',
 exp5_title: 'Café server · Chez Bruno', exp5_role: 'Customer service · advice · sales · cash handling', exp5_date: 'September 2019 – April 2022', exp5_label: 'What I worked on',
-      exp5_desc: 'My first truly hands-on role, working directly with the public across service, sales and day-to-day operations. It taught me to welcome people well, make useful recommendations quickly and keep an eye for detail when things get busy.',
+      exp5_desc: 'A student job every Sunday: my first truly hands-on role, working directly with the public across service, sales and day-to-day operations. It taught me to welcome people well, make useful recommendations quickly and keep an eye for detail when things get busy.',
       exp5_li1: 'Customer welcome and advice', exp5_li2: 'Sales and product presentation', exp5_li3: 'Cash handling and sales-floor management',
       tech_title: 'Skills & interests', tech_date1: 'Management', tech_title1: 'Tracking and analysis', tech_desc1: 'Excel reporting and tracking sheets, budget follow-up, supplier reconciliations, cash control, quote profitability analysis.', tech_date2: 'Since 2022', tech_title2: 'ChatGPT Pro', tech_desc2: 'Daily use of generative AI to learn, produce and save time.', tech_date3: 'Tools', tech_title3: 'Day to day', tech_desc3: 'Excel, Microsoft Office, Google Workspace, POS and invoicing software (Square, SumUp, Zervant), WordPress, Canva.', tech_date5: 'People', tech_title5: 'Welcoming, advising, talking', tech_desc5: 'Several years working with customers, on the floor and in sales. First place, IDRAC Montpellier public-speaking contest 2025.', tech_date4: 'Interests', tech_title4: 'What motivates me', tech_desc4: 'Hospitality, the local economy, the business press, and wanting to understand what makes a business work.',
       nav_finance: 'What I’ve learned', meta_title_finance: 'What I have learned — Timo × LJ Hôtels & Co',
-      landing_restau: 'I have always enjoyed the restaurant world. Through my work in Béziers, at the counter, on the floor and alongside caterers, I have come to know what the city offers, its venues and suppliers, and also its customers: regulars, families, businesses and visitors passing through.',
-      landing_pitch: 'A student in the Master in Management (Programme Grande École) at Montpellier Business School, I am looking for a two-year work-study role and would be glad to learn within the group, in management control and finance roles, with a view to business development.',
+      landing_restau: 'Always drawn to the restaurant world, I have held a range of roles: service, bar, till, purchasing and supplies, station waiter and head waiter.<br><br>These experiences helped me build strong people skills as well as commercial and analytical abilities. Their variety has also given me a good knowledge of the sector, from Paris to Béziers.',
+      landing_pitch: 'A student in the Master in Management (Programme Grande École) at Montpellier Business School, I am looking for a work-study position, available immediately, with a rhythm of three weeks in the company and one week at school.<br><br>I would like to work in cross-functional roles, alongside the management of the different venues, contributing to financial and strategic analysis, performance tracking, project coordination and the summaries that support decision-making.<br><br>I would also like to support management on development, organisation and steering topics.',
       fin_kicker: '05 / 06 · What I’ve learned', fin_title: 'What Béziers <em>has taught me.</em>', fin_lead: 'Arlett, Les Savouries, the Feria: these experiences helped me get to know Béziers customers and the daily life of a venue. Here is what I take from them.',
       fin_c1_label: '01 / The counter', fin_c1_title: 'A year at Arlett', fin_c1_p: 'You already know Arlett. Being part of it from the launch taught me a lot: the till, the suppliers, the habits of morning customers and the quieter hours. I learned what makes a customer want to come back.',
       fin_c2_label: '02 / Events', fin_c2_title: 'On the floor with Les Savouries', fin_c2_p: 'For a Béziers caterer, at high-attendance events. I discovered what local clients expect from a reception, and how much the kitchen and the floor depend on each other.',
@@ -817,11 +821,12 @@ exp5_title: 'Café server · Chez Bruno', exp5_role: 'Customer service · advice
       loop_kicker: '05 / 05 · Why LJ Hôtels & Co',
       loop_title: 'What draws me to <em>LJ <b class="nw">Hôtels &amp; Co.</b></em>',
       loop_lead: 'A group that makes Béziers more attractive, customers I have come to know, and a lot to learn alongside you.',
-      loop_card1_title: 'A group rooted in Béziers.', loop_card1_p: 'Four hotels, a Michelin-starred restaurant, a Bib Gourmand, terraces on Place Jean-Jaurès: the group helps make the city attractive. It would be a chance to contribute, even in a small way.',
-      loop_card2_title: 'Customers I know.', loop_card2_p: 'At the counter at Arlett, on the floor with Les Savouries, at a bar during the Feria: I have come to know Béziers customers, their habits, their expectations and the busiest weeks.',
-      loop_card3_title: 'Behind the scenes.', loop_card3_p: 'My first experiences in management gave me some foundations. I would like to build on them alongside you, learning how the group runs its venues and supports its teams, in line with its overall vision.',
+      loop_card1_title: 'A strong identity in Béziers.', loop_card1_p: 'Four hotels, restaurants with distinct styles, terraces on Place Jean-Jaurès. Each address has its own character, and together they give the group a real place in the life of the city.',
+      loop_card2_title: 'A taste for things done well.', loop_card2_p: 'From the Michelin star to the Bib Gourmand, and the place given to art, the group combines variety and high standards. It is this pursuit of quality that makes me want to join it.',
+      loop_card4_title: 'From the floor to strategy.', loop_card4_p: 'Service, the till, supplies, the pace of a busy evening: I know that day-to-day. What draws me now is the next step: understanding how a group that opens and takes over venues analyses and steers its projects.',
+      loop_card3_title: 'Steering diversity.', loop_card3_p: 'Very different venues and growth projects: that is what draws me on the finance side. I would bring my field knowledge and rigour, and learn to analyse performance to support management in its strategic choices.',
       loop_letter_title: 'I would be glad <em>to talk with you.</em>',
-      loop_letter_p: 'Thank you for taking the time to look at my background. I remain available for a conversation whenever suits you.',
+      loop_letter_p: 'Thank you for taking the time to look at my background. I remain available whenever suits you.',
       nav_cv: 'CV ↓',
       more_sum: 'Beyond the CV', more_1: 'First place, IDRAC Montpellier public-speaking contest 2025', more_2: 'Sport: cross-training, swimming, running, hiking', more_3: 'Reading biographies, international and business press',
       cta_cv: 'Download my CV', cta_mail: 'Write to me',
