@@ -1474,9 +1474,52 @@ exp5_title: 'Café server · Chez Bruno', exp5_role: 'Customer service · advice
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
+<style>
+.mail-pop{display:grid;gap:12px;margin-top:16px;max-width:520px;padding:18px 20px;border:1px solid var(--p-line);border-radius:14px;background:#fff;box-shadow:0 18px 40px -24px rgba(10,35,80,.45);animation:mailIn .3s cubic-bezier(.2,.8,.2,1) both}
+.mail-pop[hidden]{display:none}
+@keyframes mailIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.mail-pop{animation:none}}
+.mail-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.mail-addr{font-size:18px;font-weight:600;color:var(--j-ink);user-select:all;word-break:break-all}
+.mail-btn{display:inline-flex;align-items:center;padding:9px 14px;border:1px solid var(--p-line);border-radius:999px;background:var(--j-cloud);color:var(--j-ink);font:600 13px var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.mail-btn:hover,.mail-btn:focus-visible{background:var(--j-sapphire);border-color:var(--j-sapphire);color:#fff}
+.mail-copy{background:var(--j-sapphire);border-color:var(--j-sapphire);color:#fff}
+.mail-note{margin:0!important;font-size:13px!important;color:var(--j-sub)!important}
+</style>
 <script>
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-mail]');if(!a)return;var framed=false;try{framed=window.self!==window.top}catch(x){framed=true}
-if(!framed)return;e.preventDefault();var addr='timomt.pro@gmail.com';try{navigator.clipboard.writeText(addr).catch(function(){})}catch(x){}a.removeAttribute('data-i18n');a.textContent=addr;});
+(function(){
+  var ADDR='timomt.pro@gmail.com',SUBJ='Candidature alternance — Timo Marguerat-Trichard';
+  var q='to='+encodeURIComponent(ADDR)+'&su='+encodeURIComponent(SUBJ);
+  var en=function(){return document.documentElement.lang==='en'};
+  var build=function(btn){
+    var pop=document.createElement('div');pop.className='mail-pop';pop.id='mail-pop';pop.setAttribute('role','group');
+    pop.innerHTML='<div class="mail-row"><span class="mail-addr"></span><button type="button" class="mail-btn mail-copy"></button></div>'+
+      '<div class="mail-row"><a class="mail-btn" target="_blank" rel="noopener" data-k="gmail">Gmail</a><a class="mail-btn" target="_blank" rel="noopener" data-k="outlook">Outlook</a><a class="mail-btn" data-k="app"></a></div>'+
+      '<p class="mail-note"></p>';
+    pop.querySelector('.mail-addr').textContent=ADDR;
+    pop.querySelector('[data-k="gmail"]').href='https://mail.google.com/mail/?view=cm&fs=1&'+q;
+    pop.querySelector('[data-k="outlook"]').href='https://outlook.live.com/mail/0/deeplink/compose?to='+encodeURIComponent(ADDR)+'&subject='+encodeURIComponent(SUBJ);
+    pop.querySelector('[data-k="app"]').href='mailto:'+ADDR+'?subject='+encodeURIComponent(SUBJ);
+    var copy=pop.querySelector('.mail-copy');
+    copy.addEventListener('click',function(){
+      var ok=function(){copy.textContent=en()?'Copied':'Adresse copiée'};
+      var fb=function(){var r=document.createRange();r.selectNodeContents(pop.querySelector('.mail-addr'));var sel=getSelection();sel.removeAllRanges();sel.addRange(r);copy.textContent=en()?'Selected, press ⌘C':'Sélectionnée, faites ⌘C'};
+      try{navigator.clipboard.writeText(ADDR).then(ok,fb)}catch(x){fb()}
+    });
+    btn.closest('.cta-row').after(pop);return pop;
+  };
+  var label=function(pop){
+    pop.querySelector('.mail-copy').textContent=en()?'Copy address':'Copier l’adresse';
+    pop.querySelector('[data-k="app"]').textContent=en()?'Mail app':'Appli Mail';
+    pop.querySelector('.mail-note').textContent=en()?'Choose how you would like to write to me.':'Choisissez comment m’écrire.';
+  };
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('[data-mail]');if(!a)return;e.preventDefault();
+    var pop=document.getElementById('mail-pop')||build(a);label(pop);
+    pop.hidden=!pop.hidden&&pop.dataset.ready==='1';pop.dataset.ready='1';
+    a.setAttribute('aria-expanded',String(!pop.hidden));a.setAttribute('aria-controls','mail-pop');
+  });
+})();
 </script>
 <script>
 (function(){
